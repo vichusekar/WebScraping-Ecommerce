@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-image: url(/src/images/Background.png);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -11,3 +12,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header {
+  border: 1px solid blue;
+}
+
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90px;
+  height: 30px;
+  margin-top: 14px;
+  color: black;
+}
+.search-input{
+  width: 750px;
+  border-radius: 7px;
+  margin-left: 80px;
+}
+.header__searchIcon{
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  margin-top: 10px;
+  background-color: yellow;
+}
+.nav-link{
+  color: aliceblue;
+  background-color: brown;
+  border: 2px solid yellow;
+}
+
+.body-image{
+  /* margin-right: 100px; */
+  width: 1366px;
+  height: 589px;
+}
+
+/* .card-whole-body{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+} */
+
+/* .card-body{
+  display: flex;
+  flex-direction: row;
+} */
