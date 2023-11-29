@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import axios from 'axios'
 import Header from './Header'
+
 function Baby() {
 
     let [data, setData] = useState([])
-    let navigate = useNavigate()
 
     let handlegetBaby = async () => {
         try {
@@ -26,29 +25,26 @@ function Baby() {
 
     return <>
         <Header />
-        <div className='container-fluid' style={{ display: 'flex', flexDirection: 'row', justifyContent:'space-between' }} >
-
-            <div >
-                {
-                    data.map((e, i) => {
-                        return <Card style={{ width: '18rem' }} className='bg-color'>
-                            <Card.Body>
-                                <Card.Title>Details</Card.Title>
-                                <Card.Text>
-                                    <tr key={i} >
-                                        <td>{e.title}</td>
-                                        <td>{e.price}</td>
-                                        <td>{e.ratings}</td>
-                                        <td>{e.finalprice}</td>
-                                    </tr>
-                                </Card.Text>
-                                <Button style={{ color: 'black', backgroundColor: 'orange' }}>Buy now</Button>
-                                <Button style={{ color: 'black', backgroundColor: 'yellow', marginLeft: '10px ' }}>Add to cart</Button>
-                            </Card.Body>
-                        </Card>
-                    }
-                    )}
-            </div>
+        <div className='d-flex w-60% flex-wrap' style={{ justifyContent: 'space-around', marginLeft: '10px', size: '100px', height: '200px' }}>
+            {
+                data.map((e, i) => {
+                    return <Card style={{ width: '18rem' }} className='bg-color'>
+                        <Card.Body>
+                            <Card.Text>
+                                <div className='product-card'>
+                                    <img src={e.image} alt='' style={{ width: '200px', height: '200px' }} />
+                                    <p style={{ fontSize: '15px' }}>{e.title}</p>
+                                    <p>{e.price}</p>
+                                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyNm3O0L9PWAzL3oGmbsZl_EgQEggF6mlR1w&usqp=CAU' alt='' style={{ width: '100px' }} />
+                                    <p>{e.ratings}</p>
+                                </div>
+                            </Card.Text>
+                            <Button style={{ color: 'black', backgroundColor: 'orange' }}>Buy now</Button>
+                            <Button style={{ color: 'black', backgroundColor: 'yellow', marginLeft: '10px ' }}>Add to cart</Button>
+                        </Card.Body>
+                    </Card>
+                }
+                )}
         </div>
     </>
 }
