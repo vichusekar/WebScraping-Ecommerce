@@ -3,15 +3,13 @@ const mongoose = require('mongoose')
 
 let productSchema = new mongoose.Schema({
 
-    title: {type: String, required:false, }, 
+    title: { type: String },
 
-    price: {type: String, required: false},
+    price: { type: String },
 
-    // image: {type: String, required: true},
+    image: { type: String },
 
-    // ratings: {type: String, required: true},
-
-    // finalprice: {type: String, required: true}
+    ratings: { type: String }
 
 }, { collection: 'allproducts', versionKey: false })
 
@@ -21,15 +19,14 @@ let ProductModel = mongoose.model('allproducts', productSchema)
 
 let electronicsSchema = new mongoose.Schema({
 
-    title: {type: String, required:false, }, 
+    title: { type: String },
 
-    price: {type: String, required: false},
+    price: { type: String },
 
-    // image: {type: String, required: true},
+    image: { type: String },
 
-    // ratings: {type: String, required: true},
+    ratings: { type: String }
 
-    // finalprice: {type: String, required: true}
 
 }, { collection: 'electronics', versionKey: false })
 
@@ -39,15 +36,13 @@ let ElectModel = mongoose.model('electronics', electronicsSchema)
 
 let mobilesSchema = new mongoose.Schema({
 
-    title: {type: String, required:false, }, 
+    title: { type: String },
 
-    price: {type: String, required: false},
+    price: { type: String },
 
-    // image: {type: String, required: true},
+    image: { type: String },
 
-    // ratings: {type: String, required: true},
-
-    // finalprice: {type: String, required: true}
+    ratings: { type: String }
 
 }, { collection: 'mobiles', versionKey: false })
 
@@ -58,15 +53,13 @@ let MobileModel = mongoose.model('mobiles', mobilesSchema)
 
 let laptopSchema = new mongoose.Schema({
 
-    title: {type: String, required:false, }, 
+    title: { type: String },
 
-    price: {type: String, required: false},
+    price: { type: String },
 
-    // image: {type: String, required: true},
+    image: { type: String },
 
-    // ratings: {type: String, required: true},
-
-    // finalprice: {type: String, required: true}
+    ratings: { type: String }
 
 }, { collection: 'laptops', versionKey: false })
 
@@ -77,15 +70,13 @@ let LaptopModel = mongoose.model('laptops', laptopSchema)
 
 let toysSchema = new mongoose.Schema({
 
-    title: {type: String, required:false, }, 
+    title: { type: String },
 
-    price: {type: String, required: false},
+    price: { type: String },
 
-    // image: {type: String, required: true},
+    image: { type: String },
 
-    // ratings: {type: String, required: true},
-
-    // finalprice: {type: String, required: true}
+    ratings: { type: String }
 
 }, { collection: 'toys', versionKey: false })
 
@@ -96,15 +87,13 @@ let ToysModel = mongoose.model('toys', toysSchema)
 
 let gamesSchema = new mongoose.Schema({
 
-    title: {type: String, required:false, }, 
+    title: { type: String },
 
-    price: {type: String, required: false},
+    price: { type: String },
 
-    // image: {type: String, required: true},
+    image: { type: String },
 
-    // ratings: {type: String, required: true},
-
-    // finalprice: {type: String, required: true}
+    ratings: { type: String }
 
 }, { collection: 'games', versionKey: false })
 
@@ -115,15 +104,13 @@ let GamesModel = mongoose.model('games', gamesSchema)
 
 let carsSchema = new mongoose.Schema({
 
-    title: {type: String, required:false, }, 
+    title: { type: String },
 
-    price: {type: String, required: false},
+    price: { type: String },
 
-    // image: {type: String, required: true},
+    image: { type: String },
 
-    // ratings: {type: String, required: true},
-
-    // finalprice: {type: String, required: true}
+    ratings: { type: String }
 
 }, { collection: 'cars', versionKey: false })
 
@@ -133,15 +120,13 @@ let CarsModel = mongoose.model('cars', carsSchema)
 
 let motorSchema = new mongoose.Schema({
 
-    title: {type: String, required:false, }, 
+    title: { type: String },
 
-    price: {type: String, required: false},
+    price: { type: String },
 
-    // image: {type: String, required: true},
+    image: { type: String },
 
-    // ratings: {type: String, required: true},
-
-    // finalprice: {type: String, required: true}
+    ratings: { type: String }
 
 }, { collection: 'motors', versionKey: false })
 
@@ -151,15 +136,13 @@ let MotorbikeModel = mongoose.model('motors', motorSchema)
 
 let bookSchema = new mongoose.Schema({
 
-    title: {type: String, required:false, }, 
+    title: { type: String },
 
-    price: {type: String, required: false},
+    price: { type: String },
 
-    // image: {type: String, required: true},
+    image: { type: String },
 
-    // ratings: {type: String, required: true},
-
-    // finalprice: {type: String, required: true}
+    ratings: { type: String }
 
 }, { collection: 'books', versionKey: false })
 
@@ -169,16 +152,13 @@ let BooksModel = mongoose.model('books', bookSchema)
 
 let watchSchema = new mongoose.Schema({
 
-    title: {type: String, required:false, }, 
+    title: { type: String },
 
-    price: {type: String, required: false},
+    price: { type: String },
 
-    // image: {type: String, required: true},
+    image: { type: String },
 
-    // ratings: {type: String, required: true},
-
-    // finalprice: {type: String, required: true}
-
+    ratings: { type: String }
 }, { collection: 'watches', versionKey: false })
 
 let WatchModel = mongoose.model('watches', watchSchema)
@@ -187,19 +167,17 @@ let WatchModel = mongoose.model('watches', watchSchema)
 
 let babySchema = new mongoose.Schema({
 
-    title: {type: String, required:false, }, 
+    title: { type: String },
 
-    price: {type: String, required: false},
+    price: { type: String },
 
-    // image: {type: String, required: true},
+    image: { type: String },
 
-    // ratings: {type: String, required: true},
-
-    // finalprice: {type: String, required: true}
+    ratings: { type: String }
 
 }, { collection: 'babys', versionKey: false })
 
 let BabyModel = mongoose.model('babys', babySchema)
 
 
-module.exports = {ProductModel, ElectModel, MobileModel, BabyModel, CarsModel, MotorbikeModel, WatchModel, LaptopModel, ToysModel, GamesModel, BooksModel}
+module.exports = { ProductModel, ElectModel, MobileModel, BabyModel, CarsModel, MotorbikeModel, WatchModel, LaptopModel, ToysModel, GamesModel, BooksModel }
