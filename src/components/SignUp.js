@@ -21,12 +21,13 @@ function SignUp() {
 
         try {
             let res = await axios.post(`${process.env.REACT_APP_API_URL}/register`, data)
-            if (res.status === 200) {
+            if (res.status === 200) 
+            {
+                localStorage.setItem("user-info", JSON.stringify(res.data.newUser));
                 navigate('/')
-
             }
         } catch (error) {
-            // console.log(error)
+            console.log(error)
         }
     }
 
@@ -83,6 +84,7 @@ function SignUp() {
                     <Form.Group className="mb-3" >
                         <Form.Label>Password</Form.Label>
                         <Form.Control
+                            type='password'
                             name='password'
                             placeholder="Enter password"
                             onChange={formik.handleChange}
