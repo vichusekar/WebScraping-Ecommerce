@@ -86,13 +86,15 @@ code {
 }
 
 .header__searchIcon {
-  padding: 5px;
+  padding: 4px;
   height: 22px !important;
   background-color: #cd9042;
+  margin-bottom: 8px;
 }
 
 .header__optionLineOne {
-  font-size: 10px;
+  /* font-size: 10px; */
+  font-size: small;
 }
 
 .header__optionLineTwo {
