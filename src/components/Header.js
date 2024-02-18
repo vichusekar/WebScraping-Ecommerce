@@ -3,10 +3,18 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useNavigate } from 'react-router-dom';
+import Nav from 'react-bootstrap/Nav';
 
 function Header() {
 
     let navigate = useNavigate()
+    let user = JSON.parse(localStorage.getItem("user-info"));
+
+
+    function Logout(){
+        localStorage.clear()
+        navigate('/')
+    }
 
     return <>
         <div className="header">
@@ -38,11 +46,26 @@ function Header() {
 
                 <div className="header__option">
                     <span className="header__optionLineOne">Hello Guest</span>
-                    {<span className="header__optionLineTwo"
-                        onClick={() => navigate('/register')}
-                        style={{ cursor: 'pointer' }}>
-                        Sign Up
-                    </span>}
+                    {
+                        localStorage.getItem("user-info") ?
+                            <>
+                                <span className="header__optionLineTwo"
+                                    onClick={() => navigate('/')}
+                                    style={{ cursor: 'pointer' }}>
+                                    <NavDropdown title={user && user.name} >
+                                        <NavDropdown.Item onClick={Logout}>
+                                            LogOut
+                                        </NavDropdown.Item>
+                                    </NavDropdown>
+                                </span>
+                            </>
+                            :
+                            <>
+                                <Nav.Link  onClick={() => navigate('/register')} ><b>SignUp</b></Nav.Link>
+                            </>
+
+                    }
+
                 </div>
 
 
