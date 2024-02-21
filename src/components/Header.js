@@ -52,19 +52,18 @@ function Header() {
                                 <span className="header__optionLineTwo"
                                     onClick={() => navigate('/')}
                                     style={{ cursor: 'pointer' }}>
-                                    <NavDropdown title={user && user.name} >
-                                        <NavDropdown.Item onClick={Logout}>
-                                            LogOut
-                                        </NavDropdown.Item>
-                                    </NavDropdown>
+                                    <Nav.Link onClick={Logout} >
+                                        Logout
+                                    </Nav.Link>
                                 </span>
                             </>
                             :
                             <>
-                                <Nav.Link  onClick={() => navigate('/register')} ><b>SignUp</b></Nav.Link>
+                                <Nav.Link onClick={() => navigate('/register')} ><b>SignUp</b></Nav.Link>
                             </>
 
                     }
+
 
                 </div>
 
