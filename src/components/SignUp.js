@@ -7,7 +7,6 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 
 function SignUp() {
-
     let navigate = useNavigate()
 
     let handleSubmit = async (e) => {
