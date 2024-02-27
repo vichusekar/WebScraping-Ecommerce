@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -8,10 +8,8 @@ import Nav from 'react-bootstrap/Nav';
 function Header() {
 
     let navigate = useNavigate()
-    let user = JSON.parse(localStorage.getItem("user-info"));
 
-
-    function Logout(){
+    function Logout() {
         localStorage.clear()
         navigate('/')
     }
@@ -64,10 +62,7 @@ function Header() {
 
                     }
 
-
                 </div>
-
-
 
                 <div className="header__option">
                     <span className="header__optionLineOne">Returns</span>
